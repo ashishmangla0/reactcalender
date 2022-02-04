@@ -1,38 +1,125 @@
-.App {
+.calendarwrap .rdrDefinedRangesWrapper {
+  display: none;
+}
+.calendarwrap .rdrDayDisabled .rdrDayNumber span {
+  text-decoration: line-through;
+  color: #737373;
+}
+.calendarwrap .rdrDayDisabled .rdrDayNumber {
+  font-weight: normal;
+}
+.calendarwrap .rdrDayDisabled {
+  background: #ffffff;
+}
+.rdrDayNumber {
+  font-weight: 700;
+}
+.calendarwrap .rdrNextPrevButton {
+  background: #ffffff;
+  border-radius: 0;
+}
+
+.calendarwrap .rdrMonthName {
   text-align: center;
+  font-weight: 700;
+  color: #000000;
+  font-size: 16px;
+  line-height: 24px;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 8px;
+}
+.calendarwrap .rdrMonthAndYearPickers {
+  display: none;
+}
+.calendarwrap.rdrDateRangePickerWrapper {
+  position: relative;
+}
+.calendarwrap .rdrMonthAndYearWrapper {
+  position: absolute;
+  width: 100%;
+  height: 24px;
+  padding-top: 0;
+}
+.calendarwrap .rdrNextPrevButton {
+  margin: 0;
+}
+.calendarwrap .rdrNextPrevButton i {
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+  border: 0;
+  transform: none;
+  margin: 0;
+  transform: rotate(45deg);
+}
+.calendarwrap .rdrPprevButton i {
+  border-bottom: 2px solid #008545;
+  border-left: 2px solid #008545;
+}
+.calendarwrap .rdrNextButton i {
+  border-top: 2px solid #008545;
+  border-right: 2px solid #008545;
+}
+.calendarwrap .rdrWeekDay {
+  color: #494949;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  line-height: 16px;
+}
+.calendarwrap .rdrDay {
+  height: 48px;
+  margin-bottom: 8px;
+}
+.rdrMonth .rdrWeekDays{
+  margin-bottom: 8px;
+}
+.calendarwrap .rdrStartEdge,
+.calendarwrap .rdrDayNumber,
+.calendarwrap .rdrInRange,
+.calendarwrap .rdrEndEdge{
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.calendarwrap .rdrEndEdge{
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.calendarwrap .rdrStartEdge{
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.calendarwrap .rdrEndEdge ~ .rdrDayNumber,
+.calendarwrap .rdrStartEdge ~.rdrDayNumber{
+  border-radius: 50%;
+}
+.calendarwrap .rdrEndEdge ~ .rdrDayNumber{
+  border: 2px solid #008545;
+  background: #ffffff;
+}
+.rdrDayNumber span{
+  color: #1c1c1c !important
+}
+.calendarwrap .rdrEndEdge ~ .rdrDayNumber span{
+  /* color: #008545; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.calendarwrap .rdrStartEdge ~.rdrDayNumber{
+  background: #008545;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.calendarwrap .rdrStartEdge ~.rdrDayNumber span{
+  color: #ffffff !important;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.calendarwrap .rdrDayToday .rdrDayNumber span{
+  color: #008545 !important;
+  font-weight: 700;
 }
-
-.App-link {
-  color: #61dafb;
+.calendarwrap .rdrDayToday .rdrDayNumber span:after{
+  content: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* .calendarwrap .rdrDayHovered span {
+  background: red;
+}  */
